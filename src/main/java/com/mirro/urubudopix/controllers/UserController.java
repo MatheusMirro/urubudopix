@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.mirro.urubudopix.exceptions.EmailAlreadyExistsException;
 import com.mirro.urubudopix.models.User;
-import com.mirro.urubudopix.services.UsersService;
+import com.mirro.urubudopix.services.UserService;
 
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
 
     @Autowired
-    private UsersService userService;
+    private UserService userService;
 
     @PostMapping("/create")
     public ResponseEntity<String> createUser(@RequestBody User user) {
