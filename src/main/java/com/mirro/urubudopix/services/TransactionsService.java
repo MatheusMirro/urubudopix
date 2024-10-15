@@ -31,9 +31,8 @@ public class TransactionsService {
         } else if (transaction.getType().equals("WITHDRAWAL")) {
             user.setBalance(user.getBalance() - transaction.getAmount());
         }
-
+        
         userRepository.save(user);
-
         return transactionsRepository.save(transaction);
 
     }

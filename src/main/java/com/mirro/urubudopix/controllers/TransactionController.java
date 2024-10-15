@@ -29,4 +29,16 @@ public class TransactionController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+
+    @PostMapping("/withdrawal")
+    public ResponseEntity<String> withdrawal(@RequestBody Transaction transaction) {
+        try {
+            transaction.setType("WITHDRAWAL");
+            Transaction createTransaction = transactionsService.createTransaction(transaction);
+            return ResponseEntity.ok(createTransaction.getAmount() + "Withdrawal Succesful: ");
+
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
 }
