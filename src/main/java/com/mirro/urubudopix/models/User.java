@@ -24,6 +24,7 @@ public class User {
     private String email;
     private String password;
     private String username;
+    private Double balance;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Bet> bets;
