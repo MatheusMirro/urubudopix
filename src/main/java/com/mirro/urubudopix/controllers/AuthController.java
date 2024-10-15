@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mirro.urubudopix.models.User;
-import com.mirro.urubudopix.services.UsersService;
+import com.mirro.urubudopix.services.UserService;
 
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
 
     @Autowired
-    private UsersService userService;
+    private UserService userService;
 
     @PostMapping("/login")
     public String login(@RequestBody User user) {
