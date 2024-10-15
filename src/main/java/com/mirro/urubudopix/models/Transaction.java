@@ -19,7 +19,7 @@ public class Transaction {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Double amount;
-    private String type; // Tipo de transação (e.g. "DEPOSIT", "WITHDRAWAL")
+    private String type;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
