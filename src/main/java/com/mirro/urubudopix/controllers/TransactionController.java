@@ -9,13 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.mirro.urubudopix.models.Transaction;
 import com.mirro.urubudopix.services.TransactionsService;
-import com.mirro.urubudopix.services.UserService;
 
 @RestController
 @RequestMapping("/api/transactions")
 public class TransactionController {
-    @Autowired
-    private UserService userService;
     @Autowired
     private TransactionsService transactionsService;
 
