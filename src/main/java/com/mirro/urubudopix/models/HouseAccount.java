@@ -15,6 +15,6 @@ import lombok.NoArgsConstructor;
 public class HouseAccount {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     private Double balance = 0.0;
 }

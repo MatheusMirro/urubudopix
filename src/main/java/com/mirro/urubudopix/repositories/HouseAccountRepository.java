@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 import com.mirro.urubudopix.models.HouseAccount;
 
 @Repository
-public interface HouseAccountRepository extends JpaRepository<HouseAccount, Long> {
+public interface HouseAccountRepository extends JpaRepository<HouseAccount, Integer> {
 }
