@@ -39,5 +39,4 @@ public class UserController {
             return ResponseEntity.badRequest().body("Error updating balance: " + e.getMessage());
         }
     }
-
 }
